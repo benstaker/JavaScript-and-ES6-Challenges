@@ -7,9 +7,9 @@ Change one line of code so, that error will go away.
 Don't change lines 14, 19.
 */
 
-"use strict";
+'use strict';
 
-const arr = [1, 2];
+var arr = [1, 2];
 
 arr.push(3);
 
