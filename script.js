@@ -4,12 +4,13 @@ Swap values of the a and b.
 Don't use for this any new variable.
 */
 
-"use strict";
+'use strict';
 
-var a = "first";
-var b = "second";
+var a = 'first';
+var b = 'second';
 
 // Write code here
+[b, a] = [a, b];
 
 console.log(a, b);
 // second first
