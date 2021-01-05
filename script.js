@@ -10,11 +10,26 @@ It should return an object like this:
 }
 */
 
-"use strict";
+'use strict';
 
 var nums = [10, -12, 30, -1, -8, 0, 14, -33, 20];
 
 // Write sumPlusMinus() function here
+
+function sumPlusMinus(data) {
+    let plus = 0;
+    let minus = 0;
+
+    data.forEach((item) => {
+        if (item >= 0) {
+            plus += item;
+        } else {
+            minus += item;
+        }
+    });
+
+    return { plus, minus };
+}
 
 console.log(sumPlusMinus(nums));
 // {plus: 74, minus: -54}
