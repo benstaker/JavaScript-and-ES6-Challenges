@@ -6,7 +6,12 @@ Use console.log() at the end of the sum() function to print result.
 Use ES6 whenever possible.
 */
 
-"use strict";
+'use strict';
+
+function sum(...args) {
+    const summedResult = args.reduce((item, result) => result + item, 0);
+    console.log(summedResult);
+}
 
 // Write code here
 
