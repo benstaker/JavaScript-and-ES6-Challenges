@@ -4,12 +4,11 @@ Assign values to the a, b, c variables
 using destructuring and rest operator.
 */
 
-"use strict";
-
-var a, b, c;
+'use strict';
 
 var arr = [1, 2, 3, 4, 5, 6, 7];
 
+var [a, b, ...c] = arr;
 // Write code here
 
 console.log(a);
