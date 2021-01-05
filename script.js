@@ -5,16 +5,22 @@ of the fields that contain numbers.
 Ensure that iteration is done only over own properties of the object.
 */
 
-"use strict";
+'use strict';
 
 var nums = {
-  a: 10,
-  b: 20,
-  c: "string",
-  d: 12
+    a: 10,
+    b: 20,
+    c: 'string',
+    d: 12
 };
 
 // Write code here
+
+function sumObjectValues(data) {
+    return Object.values(data).reduce((result, item) => {
+        return typeof item === 'number' ? result + item : result;
+    }, 0);
+}
 
 console.log(sumObjectValues(nums));
 //42
