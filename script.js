@@ -7,16 +7,21 @@ Car is considered cheap if it's price is <= 20000
 Car is considered expensive it it's price is > 20000
 */
 
-"use strict";
+'use strict';
 
 var cars = [
-  { brand: "Honda", price: 13000 },
-  { brand: "Rolls-Royce", price: 120000 }
+    { brand: 'Honda', price: 13000 },
+    { brand: 'Rolls-Royce', price: 120000 }
 ];
 
 // Write carInfo() function here
+function carInfo({ brand, price }) {
+    return `Price of my new ${brand} is ${price}$ and it is ${
+        price > 20000 ? 'a cheap' : 'an expensive'
+    } car.`;
+}
 
-cars.forEach(car => console.log(carInfo(car)));
+cars.forEach((car) => console.log(carInfo(car)));
 /* Price of my new Honda is 13000$
  and it is cheap car. */
 
