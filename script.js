@@ -7,17 +7,27 @@ Complete IIFE that will expose following methods:
 Initial greeting string "Hey, that's" must be defined inside IIFE.
 */
 
-"use strict";
+'use strict';
+
+const greeting = (() => {
+    let preText = "Hey, that's";
+
+    return {
+        changeGreeting: (text) => {
+            preText = text;
+        },
+
+        greet: (name) => `${preText} ${name}`
+    };
+})();
 
 // var greeting = (Write IIFE here);
 
-console.log(greeting.greet("Bob"));
+console.log(greeting.greet('Bob'));
 // Hey, that's Bob
 
-console.log(
-  greeting.changeGreeting("Good Morning from")
-);
+console.log(greeting.changeGreeting('Good Morning from'));
 // undefined
 
-console.log(greeting.greet("Emily"));
+console.log(greeting.greet('Emily'));
 // Good Morning from Emily
