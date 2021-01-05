@@ -4,13 +4,19 @@ Declare mult() function that will multiply values
 of the x, y, z fields of the passed object.
 */
 
-"use strict";
+'use strict';
 
 var obj = {
-  x: 5,
-  y: 20,
-  z: 3
+    x: 5,
+    y: 20,
+    z: 3
 };
+
+function mult(data) {
+    // return Object.values(data).reduce((item, result) => result * item, 1);
+    const { x, y, z } = data;
+    return x * y * z;
+}
 
 // Write mult() function here
 
