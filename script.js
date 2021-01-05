@@ -8,11 +8,10 @@ Set default value of the mult parameter
 in the multiplyBy() function.
 */
 
-"use strict";
+'use strict';
 
-function multiplyBy(a, mult) {
-  mult = mult !== undefined ? mult : 2;
-  console.log(a * mult);
+function multiplyBy(a, mult = 2) {
+    console.log(a * mult);
 }
 
 multiplyBy(2);
